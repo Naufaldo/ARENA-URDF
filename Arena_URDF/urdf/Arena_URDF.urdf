@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Arena_URDF">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.23205757931726 0.0887346141532557 -1.21899628133998"
+        rpy="0 0 0" />
+      <mass
+        value="151.242640880102" />
+      <inertia
+        ixx="87.7903709942697"
+        ixy="3.69586134970905E-15"
+        ixz="-3.63439884242386"
+        iyy="180.769539338067"
+        iyz="3.43371103041904E-15"
+        izz="94.3521005444993" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Arena_URDF/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Arena_URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_trap">
+    <inertial>
+      <origin
+        xyz="0.133116318996327 -0.0101167211128155 1.37693718494523"
+        rpy="0 0 0" />
+      <mass
+        value="19.2648362938564" />
+      <inertia
+        ixx="0.354675164109579"
+        ixy="-1.24164453645209E-07"
+        ixz="-9.12571784185893E-16"
+        iyy="0.760389829344902"
+        iyz="-6.04385404637949E-06"
+        izz="0.40710358092682" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Arena_URDF/meshes/Link_trap.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Arena_URDF/meshes/Link_trap.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Trap"
+    type="fixed">
+    <origin
+      xyz="0.01951 1.0061 -0.00017445"
+      rpy="-1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_trap" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
